@@ -1,8 +1,26 @@
-RMS(one) JavaScript SDK
+RMS(one) Application SDK
 ===
 
 [![Latest Stable Version](http://img.shields.io/badge/Latest%20Stable-0.0.1-blue.svg)]
 
+## About
+
+This section describes:
+
++ Purpose
++ Capability
++ Manifest (what it contains)
+    - This Readme that describes
+        - Getting started
+            + Installation
+            + Running Application Container
+        - Creating "Hello World" app
+        - Installing "Hello World" app in ASF
+        - Running "Hello World" in ASF
+    - Application Container
+    - Sample applications
+    - Sample applications unit tests
+    - Direction on how to view API documentation
 
 ## Getting Started
 Sample applications use Yeoman and Grunt to scaffold code and run tests. Therefore, Yeoman and Grunt need to be setup first. The easiest way to install Yeoman and Grunt is through Node.js. The tested Node.js version is 0.10.30. The recommended way to install Node.js is through `nvm` (https://github.com/creationix/nvm). After Node is installed, please follow the instructions below to install Yeoman and Grunt.
