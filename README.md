@@ -28,7 +28,11 @@
 ##Introduction
 ***
 ### What's RMS(one) Application SDK?
+> RMS(one) Application SDK empowers third-party developers by provide simple and intuitive integration with RMS(one) APIs along with features like dynamic APIs, RAL execution, running High Definition(HD) models, position metrics etc.
+
 ### What's ASF Application Container?
+> The goal of ASF Application Container is to provide third-party developers an environment to create and deploy their own  custom web application. These web application can utilize capabilities exposed by RMS(one) platform using RMS(one) Application SDK. ASF also enables multiple web applications to be combined together in a common RMS(one) UI. Further, it handles submission and installation of the web application.   
+
 ##Installation
 ***
 ### Requirements
@@ -135,7 +139,7 @@ $ grunt serve
 ***
 ## Contact us
 ***
-You can reach the developer solutions teams at ecodev@rms.com
+You can reach the developer solutions teams at <#EcoDev@rms.com>
 ## License
 ***
 ## Third-Party libraries
