@@ -19,6 +19,7 @@
     + Reposistory
 + Documentation and Resources
     + Direction on how to view API documentation
+    + Browser Compatibility
 + Change History
 + Community
 + Contact us
@@ -28,10 +29,10 @@
 ##Introduction
 ***
 ### What's RMS(one) Application SDK?
-> RMS(one) Application SDK empowers third-party developers by provide simple and intuitive integration with RMS(one) APIs along with features like dynamic APIs, RAL execution, running High Definition(HD) models, position metrics etc.
+RMS(one) Application SDK empowers third-party developers by provide simple and intuitive integration with RMS(one) APIs along with features like dynamic APIs, RAL execution, running High Definition(HD) models, position metrics etc.
 
 ### What's ASF Application Container?
-> The goal of ASF Application Container is to provide third-party developers an environment to create and deploy their own  custom web application. These web application can utilize capabilities exposed by RMS(one) platform using RMS(one) Application SDK. ASF also enables multiple web applications to be combined together in a common RMS(one) UI. Further, it handles submission and installation of the web application.   
+The goal of ASF Application Container is to provide third-party developers an environment to create and deploy their own custom web application. These web application can utilize capabilities exposed by RMS(one) platform using RMS(one) Application SDK. ASF also enables multiple web applications to be combined together in a common RMS(one) UI. Further, it handles submission and installation of the web application.   
 
 ##Installation
 ***
@@ -130,6 +131,14 @@ $ grunt serve
 ##Documentation and Resources
 ***
 ### How to access API documentation?
+### Browser Compatibility
+|Tier| Requirement|Browser(s)|Notes|
+| ------------- |:-------------:|:-------------:|:-------------:| 
+| Primary     | Tested during development. Users have the all of the functionality and UI capability. | Chrome (Windows/OSX)|
+| Compatible    | Tested during hardening. Users have all of the platform functionality that the ASF supports, but not necessarily full UI capability. Degradation is documented. | IE11, Safari (OSX), Chrome (Linux)|Example: basic entity management may work certain visualization may not.|
+| Supported     | Users may experience degraded functionality and UI capability. RMS will aim to support users of these browsers by increasing compatibility over time (if required). |IE8, IE9, IE10, Firefox, Chrome (Android), Android Browser, Safari (iOS)| These browsers are not recommended but RMS will take user feedback into consideration.|
+| Unsupported     | RMS has no plans to support these.|All other browsers (IE earlier than 8, Opera, etc).| 
+
 ## Change History
 ***
 ### Version 0.0.1 - (12/15/2014)
