@@ -1,66 +1,142 @@
-RMS(one) Application SDK
-===
-
+#RMS(one) Application SDK
 [![Latest Stable Version](http://img.shields.io/badge/Latest%20Stable-0.0.1-blue.svg)]
 
-## About
+##Table of Content
+***
++ Introduction
+    + What's RMS(one) Application SDK?
+    + What's ASF application container?
++ Installation
+    + Requirements
+    + Getting Application Container
+    + Running Application Container
+    + Run sample applications
+    + Run unit tests
++ Development
+    + Creating application using RMS(one) Application SDK
+    + Installing application in ASF
+    + Running application using ASF
+    + Reposistory
++ Documentation and Resources
+    + Direction on how to view API documentation
++ Change History
++ Community
++ Contact us
++ License
++ Third-Party libraries
 
-This section describes:
-
-+ Purpose
-+ Capability
-+ Manifest (what it contains)
-    - This Readme that describes
-        - Getting started
-            + Installation
-            + Running Application Container
-        - Creating "Hello World" app
-        - Installing "Hello World" app in ASF
-        - Running "Hello World" in ASF
-    - Application Container
-    - Sample applications
-    - Sample applications unit tests
-    - Direction on how to view API documentation
-
-## Getting Started
-Sample applications use Yeoman and Grunt to scaffold code and run tests. Therefore, Yeoman and Grunt need to be setup first. The easiest way to install Yeoman and Grunt is through Node.js. The tested Node.js version is 0.10.30. The recommended way to install Node.js is through `nvm` (https://github.com/creationix/nvm). After Node is installed, please follow the instructions below to install Yeoman and Grunt.
-Step-by-step guide
+##Introduction
+***
+### What's RMS(one) Application SDK?
+### What's ASF Application Container?
+##Installation
+***
+### Requirements
+1. Node
+2. Grunt
+3. Bower
+4. Protractor
+5. Karma
+6. AngularJS
+7. (This list is not complete, need to add other requirements too)
 
 ### Installing NVM
 
+```sh
+## Open your favorite terminal
+## Run following command to install NVM
+
 $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
 
-.. or ..
+## Restart the terminal
+$ source  ~/.nvm/nvm.sh
 
-$ wget -qO- https://raw.github.com/creationix/nvm/master/install.sh | sh
-
-
-source  ~/.nvm/nvm.sh
-#### To check what versions can be installed
+## To list all the available version of node
 $ nvm ls-remote
+```
+###Installing Node
 
-#### To install:
-nvm install [version]
-$ nvm install 0.10.0
+```sh
+## Install node version 0.10.31 using NVM
+$ nvm install 0.10.31
 
-#### To check what versions are installed
+## List of version installed on your machine
 $ nvm ls
 
-##### To use the installed version
+## Use a specific installed verison
 $ nvm use 0.10.0
-##### .. or just run the node repl with that version
+
+## check version of node
+$ node --version
+
+## .. or just run the node repl with that version
 $ nvm run 0.10.0
 
-#### To remove/uninstall
+##  Remove/Uninstall a node version
 $ nvm uninstall 0.10.0
 
-nvm install 0.10.30
-npm update -g npm
-npm install
-npm install -g grunt-cli
-npm install bower
-bower install
-npm install -g protractor
-npm install -g yo
-npm install -g generator-angular-fullstack (Optional. You can create a sandbox with this generator)
+```
+### Getting Application Container
+You can get ASF application container by cloning it from GitHub:
 
+```sh
+$ git clone https://github.com/RMSone/rmsone-js-sdk.git
+```
+
+### Running Application Container
+```sh
+## Change directory
+$ cd path/to/application/container/
+
+## Update NPM (Node Package Manager)
+$ npm update -g npm
+
+## Install all the required packages
+$ npm install
+
+## Install grunt command line
+$ npm install -g grunt-cli
+
+## Install bower
+$ npm install bower
+
+## Install all the javascript dependency libraries 
+$ bower install
+
+## Start the node server
+$ grunt serve
+```
+
+### Run sample applications
+### Run unit tests
+
+
+##Development
+***
+### Creating application using RMS(one) Application SDK
+### Installing application in ASF
+### Running application using ASF
+### Reposistory
+|Repos| Description|
+| ------------- |:-------------:| 
+| /repo1     | description 1 | 
+| /repo2     | description 2 | 
+| /repo3     | description 3 |
+
+##Documentation and Resources
+***
+### How to access API documentation?
+## Change History
+***
+### Version 0.0.1 - (12/15/2014)
++ Initial release of ASF application container
+
+## Community
+***
+## Contact us
+***
+You can reach the developer solutions teams at <#EcoDev@rms.com>
+## License
+***
+## Third-Party libraries
+***
