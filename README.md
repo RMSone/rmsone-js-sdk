@@ -2,7 +2,6 @@
 [![Latest Stable Version](http://img.shields.io/badge/Latest%20Stable-0.0.1-blue.svg)]
 
 ##Table of Content
-***
 + Introduction
     + What's RMS(one) Application SDK?
     + What's ASF application container?
@@ -27,7 +26,6 @@
 + Third-Party libraries
 
 ##Introduction
-***
 ### What's RMS(one) Application SDK?
 RMS(one) Application SDK empowers third-party developers by provide simple and intuitive integration with RMS(one) APIs along with features like dynamic APIs, RAL execution, running High Definition(HD) models, position metrics etc.
 
@@ -35,7 +33,6 @@ RMS(one) Application SDK empowers third-party developers by provide simple and i
 The goal of ASF Application Container is to provide third-party developers an environment to create and deploy their own custom web application. These web application can utilize capabilities exposed by RMS(one) platform using RMS(one) Application SDK. ASF also enables multiple web applications to be combined together in a common RMS(one) UI. Further, it handles submission and installation of the web application.   
 
 ##Installation
-***
 ### Requirements
 1. Node
 2. Grunt
@@ -117,7 +114,6 @@ $ grunt serve
 
 
 ##Development
-***
 ### Creating application using RMS(one) Application SDK
 ### Installing application in ASF
 ### Running application using ASF
@@ -129,7 +125,6 @@ $ grunt serve
 | /repo3     | description 3 |
 
 ##Documentation and Resources
-***
 ### How to access API documentation?
 ### Browser Compatibility
 |Tier| Requirement|Browser(s)|Notes|
@@ -140,16 +135,11 @@ $ grunt serve
 | Unsupported     | RMS has no plans to support these.|All other browsers (IE earlier than 8, Opera, etc).| 
 
 ## Change History
-***
 ### Version 0.0.1 - (12/15/2014)
 + Initial release of ASF application container
 
 ## Community
-***
 ## Contact us
-***
 You can reach the developer solutions teams at <#EcoDev@rms.com>
 ## License
-***
 ## Third-Party libraries
-***
