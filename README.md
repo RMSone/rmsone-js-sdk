@@ -135,7 +135,7 @@ $ grunt serve
 ***
 ## Contact us
 ***
-You can reach the developer solutions teams at <#EcoDev@rms.com>
+You can reach the developer solutions teams at ecodev@rms.com
 ## License
 ***
 ## Third-Party libraries
