@@ -5,8 +5,9 @@
 + Introduction
     + What is the RMS(one) Application SDK?
     + What is the Risk Analysis Application (RAAE) Environment?
-+ Installation
++ Installing the SDK
     + Requirements
+    + Installing the Node Version Manager (NVM)
     + Getting the Application Container
     + Running the Application Container
     + Running Sample Applications
@@ -72,6 +73,7 @@ To install the Node Version Manager (NVM), follow these steps:
 To install Node version 0.10.31 using NVM, enter:
  ```sh
  $ nvm install 0.10.31
+ ```
  
 #### Working with Node Versions
 To see a list of the Node versions installed on your machine, enter:
