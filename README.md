@@ -8,17 +8,19 @@
 + Installing the SDK
     + Requirements
     + Installing the Node Version Manager (NVM)
+    + Installing Node
+        +Working with Node Versions  
     + Getting the Application Container
     + Running the Application Container
     + Running Sample Applications
     + Running Unit Tests
 + Development
-    + Creating an Application Using the RMS(one) Application SDK
-    + Installing an Application in RAAE
-    + Running an Application Using RAAE
+    + Creating Applications Using the RMS(one) Application SDK
+    + Installing Applications in RAAE
+    + Running Applications Using RAAE
     + Repository
 + Documentation and Resources
-    + How to View API Documentation
+    + Accessing the API Documentation
     + Browser Compatibility
 + Change History
 + Community
@@ -103,7 +105,7 @@ To remove or uninstall a Node version, enter:
 $ nvm uninstall 0.10.0
 ```
 
-### Getting Application Container
+### Getting the Application Container
 
 To get the RAAE application container, clone it from GitHub:
 
@@ -111,7 +113,7 @@ To get the RAAE application container, clone it from GitHub:
 $ git clone https://github.com/RMSone/rmsone-js-sdk.git
 ```
 
-### Running Application Container
+### Running the Application Container
 
 To run the container, follow these steps: 
 
@@ -167,7 +169,7 @@ RMSONE.apikit.api.entities.getEntity({}, function (data) {
 ```
 
 ### Installing Applications in RAAE
-### Running Applications Using in RAAE
+### Running Applications Using RAAE
 ### Repository
 |Repos| Description|
 | ------------- |:-------------:| 
