@@ -3,21 +3,21 @@
 
 ##Table of Content
 + Introduction
-    + What's RMS(one) Application SDK?
-    + What's ASF application container?
+    + What is the RMS(one) Application SDK?
+    + What is the Risk Analysis Application (RAAE) Environment?
 + Installation
     + Requirements
-    + Getting Application Container
-    + Running Application Container
-    + Run sample applications
-    + Run unit tests
+    + Getting the Application Container
+    + Running the Application Container
+    + Running Sample Applications
+    + Running Unit Tests
 + Development
-    + Creating application using RMS(one) Application SDK
-    + Installing application in ASF
-    + Running application using ASF
-    + Reposistory
+    + Creating an Application Using the RMS(one) Application SDK
+    + Installing an Application in RAAE
+    + Running an Application Using RAAE
+    + Repository
 + Documentation and Resources
-    + Direction on how to view API documentation
+    + How to View API Documentation
     + Browser Compatibility
 + Change History
 + Community
@@ -26,54 +26,74 @@
 + Third-Party libraries
 
 ##Introduction
-### What's RMS(one) Application SDK?
-RMS(one) Application SDK empowers third-party developers by provide simple and intuitive integration with RMS(one) APIs along with features like dynamic APIs, RAL execution, running High Definition(HD) models, position metrics etc.
+### What is the RMS(one) Application SDK?
+The RMS(one) Application SDK empowers third-party developers by providing a simple and intuitive integration with RMS(one) APIs. Other features of the SDK include dynamic APIs, execution of Risk Analysis Langauge (RAL) commands, the ability to run High-Definition (HD) models, position metrics, and many more.
+[//]: # (JK: Do you want to list only currently available features? Or perhaps list all features and somehow note which are available and which planned?) 
 
-### What's ASF Application Container?
-The goal of ASF Application Container is to provide third-party developers an environment to create and deploy their own custom web application. These web application can utilize capabilities exposed by RMS(one) platform using RMS(one) Application SDK. ASF also enables multiple web applications to be combined together in a common RMS(one) UI. Further, it handles submission and installation of the web application.   
+### What is the Risk Analysis Application Environment (RAAE)?
+The Risk Analysis Application Environment (RAAE) provides third-party developers an environment in which they can create and deploy custom web applications. Developers use the RMS(one) Application SDK to create applications that utilize the capabilities exposed by RMS(one) platform. RAAE offers developers the ability to combine multiple web applications in a common RMS(one) UI and handles the submission and installation of web applications.   
 
-##Installation
+##Installing the SDK
+
 ### Requirements
-1. Node
+To install the RMS(one) Application SDK, you need the following:
+1. Node Version Manager (NVM)
+2. Node v0.10.31
 2. Grunt
 3. Bower
 4. Protractor
 5. Karma
 6. AngularJS
 7. (This list is not complete, need to add other requirements too)
+[//]: # (JK, AB: Can we provide versions and download locations for these requirements?)
 
-### Installing NVM
+### Installing the Node Version Manager (NVM)
+To install the Node Version Manager (NVM), follow these steps:
 
-```sh
-## Open your favorite terminal
-## Run following command to install NVM
+1. Open a your preferred terminal.
+2. Run the following command to install NVM:
 
-$ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+   ```sh
+   $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
+   ```
 
-## Restart the terminal
-$ source  ~/.nvm/nvm.sh
+3. Restart the terminal
+   ```sh
+   $ source  ~/.nvm/nvm.sh
+   ```
 
-## To list all the available version of node
-$ nvm ls-remote
-```
-###Installing Node
+4. To  see a list of all available versions of the node, enter:
+   ```sh
+   $ nvm ls-remote
+   ```
+   
+### Installing Node
+To install Node using NVM, follow these steps:
 
-```sh
-## Install node version 0.10.31 using NVM
-$ nvm install 0.10.31
+1. To install Node version 0.10.31 with NVM, enter:
+   ```sh
+   $ nvm install 0.10.31
+   ```
 
-## List of version installed on your machine
-$ nvm ls
+2. To see a list of the Node versions installed on your machine, enter:
+   ```sh
+   $ nvm ls
+   ```
+3. To use a specific installed version of Node, enter: 
+   ```sh
+   $ nvm use 0.10.0
+   ```
+4. To check the version of Node, you can:
 
-## Use a specific installed verison
-$ nvm use 0.10.0
-
-## check version of node
-$ node --version
-
-## .. or just run the node repl with that version
-$ nvm run 0.10.0
-
+  a. Run:
+   ```sh
+   $ node --version
+   ```
+   
+  b. Or run the Node replica with that version:
+  ```sh
+  $ nvm run 0.10.0
+  ```
 ##  Remove/Uninstall a node version
 $ nvm uninstall 0.10.0
 
