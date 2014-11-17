@@ -40,123 +40,133 @@ To install the RMS(one) Application SDK, you need the following:
 
 1. Node Version Manager (NVM)
 2. Node v0.10.31
-2. Grunt
-3. Bower
-4. Protractor
-5. Karma
-6. AngularJS
-7. (This list is not complete, need to add other requirements too)
+3. Grunt
+4. Bower
+5. Protractor
+6. Karma
+7. AngularJS
+8. etc... (This list is not yet complete. Other requirements need to be added.)
 [//]: # (JK, AB: Can we provide versions and download locations for these requirements?)
 
 ### Installing the Node Version Manager (NVM)
 To install the Node Version Manager (NVM), follow these steps:
 
-1. Open a your preferred terminal.
+1. Open your preferred terminal.
 2. Run the following command to install NVM:
 
    ```sh
    $ curl https://raw.github.com/creationix/nvm/master/install.sh | sh
    ```
 
-3. Restart the terminal
+3. Restart the terminal:
    ```sh
    $ source  ~/.nvm/nvm.sh
    ```
 
-4. To  see a list of all available versions of the node, enter:
+4. To see a list of all available versions of the node, enter:
    ```sh
    $ nvm ls-remote
    ```
    
 ### Installing Node
-To install Node using NVM, follow these steps:
+To install Node version 0.10.31 using NVM, enter:
+ ```sh
+ $ nvm install 0.10.31
+ 
+#### Working with Node Versions
+To see a list of the Node versions installed on your machine, enter:
+```sh
+$ nvm ls
+```
 
-1. To install Node version 0.10.31 with NVM, enter:
-   ```sh
-   $ nvm install 0.10.31
-   ```
+To use a specific installed version of Node, enter: 
+```sh
+$ nvm use 0.10.0
+```
 
-2. To see a list of the Node versions installed on your machine, enter:
-   ```sh
-   $ nvm ls
-   ```
-3. To use a specific installed version of Node, enter: 
-   ```sh
-   $ nvm use 0.10.0
-   ```
-4. To check the version of Node, you can:
+To check the version of Node, you can:
 
   a. Run:
-   ```sh
-   $ node --version
-   ```
+     ```sh
+     $ node --version
+     ``` 
    
   b. Or run the Node replica with that version:
-  ```sh
-  $ nvm run 0.10.0
-  ```
-5. Remove/Uninstall a node version
-    
-    ```sh
-    $ nvm uninstall 0.10.0
-    ```
-    
+     ```sh
+     $ nvm run 0.10.0
+     ```
+  
+To remove or uninstall a Node version, enter:
+```sh
+$ nvm uninstall 0.10.0
+```
+
 ### Getting Application Container
 
-You can get ASF application container by cloning it from GitHub:
+To get the RAAE application container, clone it from GitHub:
 
 ```sh
 $ git clone https://github.com/RMSone/rmsone-js-sdk.git
 ```
 
 ### Running Application Container
-```sh
-## Change directory
-$ cd path/to/application/container/
 
-## Update NPM (Node Package Manager)
-$ npm update -g npm
+To run the container, follow these steps: 
 
-## Install all the required packages
-$ npm install
+1. Install or update the following components:
 
-## Install grunt command line
-$ npm install -g grunt-cli
+  * Update Node Package Manager (NPM):
+    ```sh
+    $ npm update -g npm
+    ```
+    * Install all the required packages:
+      ```sh
+      $ npm install
+      ```
+    
+  * Install the Grunt command line interface (CLI):
+    ```sh
+    $ npm install -g grunt-cli
+    ```
+  * Install Bower:
+    ```sh
+    $ npm install bower
+    ```
+  * Install all the javascript dependency libraries 
+    ```sh
+    $ bower install
+    ```
 
-## Install bower
-$ npm install bower
+3. Start the Node server:
+   ```sh
+   $ grunt serve
+   ```
 
-## Install all the javascript dependency libraries 
-$ bower install
+### Running Sample Applications
+### Running Unit Tests
 
-## Start the node server
-$ grunt serve
-```
-
-### Run sample applications
-### Run unit tests
-
-
-##Development
-### Creating application using RMS(one) Application SDK
+## Development
+### Creating Applications Using the RMS(one) Application SDK
+To initialize the SDK in your application, run:
 ```javascript
-// To initialize SDK in your application
 RMSONE.init(configuration, function () {
     // Callback function
 });
 ```
+
+You can access the API using the SDK. For example, the following code gets a list of entities using the SDK: 
 ```javascript
-// To access api using SDK
-// Following example gets list of entities using SDK
+// Get list of entities
 RMSONE.apikit.api.entities.getEntity({}, function (data) {
     // use data
 }, function(error){
     // error message
 });
 ```
-### Installing application in ASF
-### Running application using ASF
-### Reposistory
+
+### Installing Applications in RAAE
+### Running Applications Using in RAAE
+### Repository
 |Repos| Description|
 | ------------- |:-------------:| 
 | /repo1     | description 1 | 
@@ -164,22 +174,23 @@ RMSONE.apikit.api.entities.getEntity({}, function (data) {
 | /repo3     | description 3 |
 
 ##Documentation and Resources
-### How to access API documentation?
-This [link](http://10.75.238.25:8080/api/index.html "API Documentation") provides complete documentation of APIs provided by RMSONE.
+### Accessing the API Documentation
+To access the API documentation provided by RMS(one), follow this [link](http://10.75.238.25:8080/api/index.html "API Documentation").
+
 ### Browser Compatibility
 |Tier| Requirement|Browser(s)|Notes|
 | ------------- |:-------------:|:-------------:|:-------------:| 
-| Primary     | Tested during development. Users have the all of the functionality and UI capability. | Chrome (Windows/OSX)|
+| Primary | Tested during development. Users have the all of the functionality and UI capability. | Chrome (Windows/OSX)|
 | Compatible    | Tested during hardening. Users have all of the platform functionality that the ASF supports, but not necessarily full UI capability. Degradation is documented. | IE11, Safari (OSX), Chrome (Linux)|Example: basic entity management may work certain visualization may not.|
 | Supported     | Users may experience degraded functionality and UI capability. RMS will aim to support users of these browsers by increasing compatibility over time (if required). |IE8, IE9, IE10, Firefox, Chrome (Android), Android Browser, Safari (iOS)| These browsers are not recommended but RMS will take user feedback into consideration.|
 | Unsupported     | RMS has no plans to support these.|All other browsers (IE earlier than 8, Opera, etc).| 
 
 ## Change History
 ### Version 0.0.1 - (12/15/2014)
-+ Initial release of ASF application container
++ Initial release of RAAE Application Container
 
 ## Community
 ## Contact us
-You can reach the developer solutions teams at <#EcoDev@rms.com>
+Send a message to the developer solutions team at <#EcoDev@rms.com>.
 ## License
-## Third-Party libraries
+## Third-Party Libraries
