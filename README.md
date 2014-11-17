@@ -95,11 +95,13 @@ To install Node using NVM, follow these steps:
   $ nvm run 0.10.0
   ```
 5. Remove/Uninstall a node version
+    
     ```sh
     $ nvm uninstall 0.10.0
-
     ```
+    
 ### Getting Application Container
+
 You can get ASF application container by cloning it from GitHub:
 
 ```sh
@@ -153,6 +155,7 @@ RMSONE.init(configuration, function () {
 
 ##Documentation and Resources
 ### How to access API documentation?
+This [link](http://10.75.238.25:8080/api/index.html "API Documentation") provides complete documentation of APIs provided by RMSONE.
 ### Browser Compatibility
 |Tier| Requirement|Browser(s)|Notes|
 | ------------- |:-------------:|:-------------:|:-------------:| 
