@@ -94,10 +94,11 @@ To install Node using NVM, follow these steps:
   ```sh
   $ nvm run 0.10.0
   ```
-##  Remove/Uninstall a node version
-$ nvm uninstall 0.10.0
+5. Remove/Uninstall a node version
+    ```sh
+    $ nvm uninstall 0.10.0
 
-```
+    ```
 ### Getting Application Container
 You can get ASF application container by cloning it from GitHub:
 
@@ -135,6 +136,12 @@ $ grunt serve
 
 ##Development
 ### Creating application using RMS(one) Application SDK
+```javascript
+// To initialize sdk in your application
+RMSONE.init(configuration, function () {
+    // Callback function
+});
+```
 ### Installing application in ASF
 ### Running application using ASF
 ### Reposistory
