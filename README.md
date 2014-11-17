@@ -37,6 +37,7 @@ The Risk Analysis Application Environment (RAAE) provides third-party developers
 
 ### Requirements
 To install the RMS(one) Application SDK, you need the following:
+
 1. Node Version Manager (NVM)
 2. Node v0.10.31
 2. Grunt
@@ -139,9 +140,18 @@ $ grunt serve
 ##Development
 ### Creating application using RMS(one) Application SDK
 ```javascript
-// To initialize sdk in your application
+// To initialize SDK in your application
 RMSONE.init(configuration, function () {
     // Callback function
+});
+```
+```javascript
+// To access api using SDK
+// Following example gets list of entities using SDK
+RMSONE.apikit.api.entities.getEntity({}, function (data) {
+    // use data
+}, function(error){
+    // error message
 });
 ```
 ### Installing application in ASF
