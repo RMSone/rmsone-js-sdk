@@ -93,7 +93,7 @@ To check the version of Node, you can run:
 $ node --version
 ``` 
 
-Or you can tun the Node replica with that version:
+Or you can run the Node replica with that version:
 ```sh
 $ nvm run 0.10.0
 ```
