@@ -9,7 +9,6 @@
     + Requirements
     + Installing the Node Version Manager (NVM)
     + Installing Node
-        +Working with Node Versions  
     + Getting the Application Container
     + Running the Application Container
     + Running Sample Applications
@@ -88,17 +87,16 @@ To use a specific installed version of Node, enter:
 $ nvm use 0.10.0
 ```
 
-To check the version of Node, you can:
+To check the version of Node, you can run:
 
-  a. Run:
-     ```sh
-     $ node --version
-     ``` 
-   
-  b. Or run the Node replica with that version:
-     ```sh
-     $ nvm run 0.10.0
-     ```
+```sh
+$ node --version
+``` 
+
+Or you can tun the Node replica with that version:
+```sh
+$ nvm run 0.10.0
+```
   
 To remove or uninstall a Node version, enter:
 ```sh
