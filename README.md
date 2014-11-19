@@ -9,6 +9,7 @@
     + Requirements
     + Installing the Node Version Manager (NVM)
     + Installing Node
+    + Installing MongoDB
     + Getting the Application Container
     + Running the Application Container
     + Running Sample Applications
@@ -98,6 +99,9 @@ To remove or uninstall a Node version, enter:
 ```sh
 $ nvm uninstall 0.10.0
 ```
+
+### Installing MongoDB
+Follow the instructions [here](http://docs.mongodb.org/manual/installation/ "Install MongoDB")
 
 ### Getting the Application Container
 
