@@ -1,0 +1,8 @@
+h2 Update Entity
+form(novalidate="")
+    textarea.ral-command(cols="70", rows="7", ng-model="definition")
+    .error(ng-if="error")
+        | {{error}}
+    .button-wrapper
+        button.update.btn.btn-default(ng-click="onUpdate()") Update
+        button.cancel.btn.btn-default(ng-click="onCancel()") Cancel
