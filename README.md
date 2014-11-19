@@ -40,14 +40,10 @@ The Risk Analysis Application Environment (RAAE) provides third-party developers
 ### Requirements
 To install the RMS(one) Application SDK, you need the following:
 
-1. Node Version Manager (NVM)
-2. Node v0.10.31
-3. Grunt
-4. Bower
-5. Protractor
-6. Karma
-7. AngularJS
-8. etc... (This list is not yet complete. Other requirements need to be added.)
+1. Node >= v0.10.31
+2. MongoDB >= v2.6.4
+3. Git >= v2.0.1
+4. etc... (This list is not yet complete. Other requirements need to be added.)
 [//]: # (JK, AB: Can we provide versions and download locations for these requirements?)
 
 ### Installing the Node Version Manager (NVM)
@@ -196,3 +192,10 @@ To access the API documentation provided by RMS(one), follow this [link](http://
 Send a message to the developer solutions team at <#EcoDev@rms.com>.
 ## License
 ## Third-Party Libraries
+1. AngularJS > v1.3
+2. Grunt
+3. Bower
+4. Karma
+5. Protractor
+6. Jasmine
+7. RequireJS
