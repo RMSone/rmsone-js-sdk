@@ -159,7 +159,7 @@ RMSONE.init(configuration, function () {
 You can access the API using the SDK. For example, the following code gets a list of entities using the SDK: 
 ```javascript
 // Get list of entities
-RMSONE.apikit.api.entities.getEntity({}, function (data) {
+RMSONE.apikit.api.entities.getEntities({}, function (data) {
     // use data
 }, function(error){
     // error message
