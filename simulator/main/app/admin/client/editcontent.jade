@@ -1,0 +1,26 @@
+.container
+    .row
+        .col-lg-12
+            div.page-header(style='width:100%')
+                div(style='width: 30%; float:right;valign:center')
+                    .message.fadein.fadeout(ng-model='message', ng-show='showMessage' style='float:right') {{message}}
+                h4(style="") Edit Content Page:
+        .col-sm-12
+            form.form(name='form' novalidate='')
+
+
+                div
+
+                    textarea(style='width:100%;' ui-tinymce="tinymceOptions" id="tinymce-content"  ng-model="tinymceModel" )
+
+
+
+
+                div.signupButton(style='padding-top:10px')
+
+                    button.redButton(type='button' ng-click='saveTemplateContent()')
+                        | Save
+//footer.footer
+//    .container
+//        p
+//            | RMS Ecosystem v1.0

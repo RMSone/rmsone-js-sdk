@@ -1,0 +1,74 @@
+<!doctype html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!-->
+<html class="no-js">
+<!--<![endif]-->
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <base href="/">
+    <title></title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script type="text/javascript" src="./bower_components/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="./configLoader.js"></script>
+    <script data-main="config" src="bower_components/requirejs/require.js"></script>
+    <link rel=”stylesheet” href=”styles/main.css”>
+    <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
+    <!-- build:css(client) app/vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/angular-grid/ng-grid.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+    <!-- build:css({.tmp,client}) app/app.css -->
+    <link rel="stylesheet" href="app/app.css">
+    <!-- injector:css -->
+    <link rel="stylesheet" href="app/admin/lib/angular-ui-tree.min.css">
+    <link rel="stylesheet" href="components/lib/angular-dropdowns.css">
+    <link rel="stylesheet" href="components/lib/angular-ui-tree.min.css">
+    <link rel="stylesheet" href="components/lib/leaflet.css">
+    <link rel="stylesheet" href="components/navbar/css/slicknav.css">
+    <!-- endinjector -->
+    <!-- endbuild -->
+</head>
+
+<body>
+
+
+    <div class="maindivcontainer">
+        <!--[if lt IE 7]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+        <!-- Add your site or application content here -->
+
+        <div style="min-height: 65vh;" id="maincontainer">
+            <div ng-include="'components/shared/header.html'"></div>
+            <div ng-view id="angularview"></div>
+            <div id="containerview"></div>
+
+
+        </div>
+        <div ng-include="'components/shared/footer.html'"></div>
+
+    </div>
+
+    <!--[if lt IE 9]>
+    <script src="bower_components/es5-shim/es5-shim.js"></script>
+    <script src="bower_components/json3/lib/json3.min.js"></script>
+    <![endif]-->
+
+    <script>
+        $("#navbar").load("components/navbar/navbar.html");
+    </script>
+    <script src="bower_components/tinymce/tinymce.min.js"></script>
+    <script src=" http://rmsone.cfapps.io/rmsone-api-kit.js"></script>
+
+
+
+</body>
+
+</html>

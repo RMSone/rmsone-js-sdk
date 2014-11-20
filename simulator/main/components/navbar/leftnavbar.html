@@ -1,0 +1,25 @@
+<div id="navigation" ng-controller="NavbarCtrl">
+    <ul ng-show="isAdmin()" class="top-level">
+        <li><a href="/admin"><span>Manage Users</span></a></li>
+        <li><a href="/listtemplate"><span>Manage Template</span></a></li>
+        <li class="has-sub"><a href="/menu"><span>Manage Navigation</span></a></li>
+    </ul>
+    <ul ng-show="!(isAdmin())" ng-model="list" class="top-level">
+        <li ng-repeat="item in list" ng-include="'items_renderer.html'"></li>
+        <!--<li class="active has-sub"><a href="#"><span>Account Setting</span></a>-->
+            <!--<ul class="sub-level">-->
+                <!--<li class="has-sub"><a href="/settings"><span>Change Password</span></a></li>-->
+            <!--</ul>-->
+        <!--</li>-->
+        <!--<li><a href="#"><span>Send Feedback</span></a></li>-->
+        <!--<li class="last"><a href="#"><span>Privacy & Terms</span></a></li>-->
+    </ul>
+
+    <script type="text/ng-template" id="items_renderer.html">
+        <a ui-sref="renderpage({ id: item.pageid,title:(item.title).split(' ').join('_')})"><span>{{item.title}}</span></a>
+        <ul ng-model="item.items" class="sub-level">
+            <li ng-repeat="item in item.items" ng-include="'items_renderer.html'" class="has-sub"></li>
+            <li class="last" ng-repeat="item in item.items" ng-include="'items_renderer.html'"><a href="#"><span>Privacy & Terms</span></a></li>
+        </ul>
+    </script>
+</div>

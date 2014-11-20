@@ -1,0 +1,13 @@
+h2 Entity Details
+div(ng-switch="" on="status")
+    div(ng-switch-when="loading")
+        | Loading entity...
+    div(ng-switch-when="done")
+        .entity-details
+           {{entity._id}} - {{entity.name}} - {{entity.description}}  
+           <!-- div(ng-bind-html="entity.schema|textToHtml") -->
+        .button-wrapper
+            button.update.btn.btn-default(ng-click="onUpdate()") Update
+            button.delete.btn.btn-default(ng-click="onDelete()") Delete            
+    .error(ng-switch-when="error")
+        | Error loading entity!
