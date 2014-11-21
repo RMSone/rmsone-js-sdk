@@ -134,7 +134,7 @@ To run the container, follow these steps:
     ```sh
     $ npm install bower
     ```
-  * Install all the JavaScript dependency libraries 
+  * Install all the JavaScript dependency libraries: 
     ```sh
     $ bower install
     ```
@@ -145,8 +145,9 @@ To run the container, follow these steps:
    ```
 
 ### Running Sample Applications
+[content pending]
 ### Running Unit Tests
-
+[content pending]
 ## Development
 ### Creating Applications Using the RMS(one) Application SDK
 To initialize the SDK in your application, run:
