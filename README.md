@@ -4,7 +4,7 @@
 ##Table of Content
 + Introduction
     + What is the RMS(one) Application SDK?
-    + What is the Risk Analysis Application (RAAE) Environment?
+    + What is the Application Solution Framework (ASF)?
 + Installing the SDK
     + Requirements
     + Installing the Node Version Manager (NVM)
@@ -16,8 +16,8 @@
     + Running Unit Tests
 + Development
     + Creating Applications Using the RMS(one) Application SDK
-    + Installing Applications in RAAE
-    + Running Applications Using RAAE
+    + Installing Applications in ASF
+    + Running Applications Using ASF
     + Repository
 + Documentation and Resources
     + Accessing the API Documentation
@@ -33,8 +33,8 @@
 The RMS(one) Application SDK empowers third-party developers by providing a simple and intuitive integration with RMS(one) APIs. Other features of the SDK include dynamic APIs, execution of Risk Analysis Langauge (RAL) commands, the ability to run High-Definition (HD) models, position metrics, and many more.
 [//]: # (JK: Do you want to list only currently available features? Or perhaps list all features and somehow note which are available and which planned?) 
 
-### What is the Risk Analysis Application Environment (RAAE)?
-The Risk Analysis Application Environment (RAAE) provides third-party developers an environment in which they can create and deploy custom web applications. Developers use the RMS(one) Application SDK to create applications that utilize the capabilities exposed by RMS(one) platform. RAAE offers developers the ability to combine multiple web applications in a common RMS(one) UI and handles the submission and installation of web applications.   
+### What is the Application Solution Framework (ASF)?
+The Application Solution Framework (ASF) provides third-party developers an environment in which they can create and deploy custom web applications. Developers use the RMS(one) Application SDK to create applications that utilize the capabilities exposed by RMS(one) platform. ASF offers developers the ability to combine multiple web applications in a common RMS(one) UI and handles the submission and installation of web applications.   
 
 ##Installing the SDK
 
@@ -45,7 +45,7 @@ To install the RMS(one) Application SDK, you need the following:
 2. MongoDB >= v2.6.4
 3. Git >= v2.0.1
 4. etc... (This list is not yet complete. Other requirements need to be added.)
-[//]: # (JK, AB: Can we provide versions and download locations for these requirements?)
+[//]: # (JK: Can/should we provide download locations for these requirements?)
 
 ### Installing the Node Version Manager (NVM)
 To install the Node Version Manager (NVM), follow these steps:
@@ -101,11 +101,11 @@ $ nvm uninstall 0.10.0
 ```
 
 ### Installing MongoDB
-Follow the instructions [here](http://docs.mongodb.org/manual/installation/ "Install MongoDB")
+To install MongoDB, follow the instructions [here](http://docs.mongodb.org/manual/installation/ "Install MongoDB")
 
 ### Getting the Application Container
 
-To get the RAAE application container, clone it from GitHub:
+To get the ASF application container, clone it from GitHub:
 
 ```sh
 $ git clone https://github.com/RMSone/rmsone-js-sdk.git
@@ -134,7 +134,7 @@ To run the container, follow these steps:
     ```sh
     $ npm install bower
     ```
-  * Install all the javascript dependency libraries 
+  * Install all the JavaScript dependency libraries 
     ```sh
     $ bower install
     ```
@@ -156,6 +156,11 @@ RMSONE.init(configuration, function () {
 });
 ```
 
+Your application must include the following reference to the location of the SDK's JavaScript library:
+```javascript
+<script type='text/javascript' src='http://rmsone.cfapps.io/rmsone.js' > </script>
+```
+
 You can access the API using the SDK. For example, the following code gets a list of entities using the SDK: 
 ```javascript
 // Get list of entities
@@ -166,8 +171,10 @@ RMSONE.apikit.api.entities.getEntities({}, function (data) {
 });
 ```
 
-### Installing Applications in RAAE
+### Installing Applications in ASF
+[content pending]
 ### Running Applications Using RAAE
+[content pending]
 ### Repository
 |Repos| Description|
 | ------------- |:-------------:| 
