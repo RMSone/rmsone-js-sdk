@@ -5,8 +5,10 @@
   "dependencies": {
     "async": "^0.9.0",
     "body-parser": "~1.5.0",
+    "cfenv": "*",
     "composable-middleware": "^0.3.0",
     "compression": "~1.0.1",
+    "connect-livereload": "~0.4.0",
     "connect-mongo": "^0.4.1",
     "cookie-parser": "~1.0.1",
     "errorhandler": "~1.0.0",
@@ -25,11 +27,11 @@
     "passport-local": "~0.1.6",
     "passport-twitter": "latest",
     "serve-favicon": "~2.0.1",
-    "connect-livereload": "~0.4.0",
-    "cfenv": "*",
     "socket.io": "^1.0.6",
     "socket.io-client": "^1.0.6",
-    "socketio-jwt": "^2.0.2"
+    "socketio-file-upload": "^0.2.7",
+    "socketio-jwt": "^2.0.2",
+    "mkdirp": "^0.5.0"
   },
   "devDependencies": {
     "connect-livereload": "~0.4.0",
@@ -86,7 +88,6 @@
     "karma-phantomjs-launcher": "~0.1.4",
     "karma-requirejs": "~0.2.1",
     "karma-script-launcher": "~0.1.0",
-    "mkdirp": "^0.5.0",
     "mocha": "^1.21.4",
     "open": "~0.0.4",
     "requirejs": "~2.1.11",
@@ -98,7 +99,7 @@
     "node": ">=0.10.0"
   },
   "scripts": {
-    "start": "node server/node_app.js",
+    "start": "node node_app.js",
     "test": "grunt test",
     "update-webdriver": "node node_modules/grunt-protractor-runner/node_modules/protractor/bin/webdriver-manager update"
   },

@@ -1,0 +1,6 @@
+.main-content
+    div.col-md-2
+        .entity-list-container(ng-include="'app/entityManagement/views/entityManagementEntityList.html'")
+        .diagram-list-container(ng-include="'app/entityManagement/views/entityManagementDiagramList.html'")
+    .entity-details-container.col-md-10
+        div(ui-view="")

@@ -22,12 +22,22 @@ var mongoose = require('mongoose');
 module.exports = function(app) {
   var env = app.get('env');
 
+  //CORS middleware
+  var allowCrossDomain = function(req, res, next) {
+        res.header('Access-Control-Allow-Origin', 'example.com');
+        res.header('Access-Control-Allow-Methods', 'GET,PUT,POST,DELETE');
+        res.header('Access-Control-Allow-Headers', 'Content-Type');
+
+        next();
+  }
+
   app.set('views', config.root + '/views');
   app.set('view engine', 'jade');
   app.use(compression());
   app.use(bodyParser.urlencoded({ extended: false }));
   app.use(bodyParser.json());
   app.use(methodOverride());
+  app.use(allowCrossDomain);
   app.use(cookieParser());
   app.use(passport.initialize());
 
@@ -39,7 +49,18 @@ module.exports = function(app) {
     saveUninitialized: true,
     store: new mongoStore({ mongoose_connection: mongoose.connection })
   }));
-  
+
+  if ('production' === env) {
+    //app.use(favicon(path.join(config.root, 'public', 'favicon.ico')));
+    //app.use(express.static(path.join(config.root, 'public')));
+    //app.set('appPath', config.root + '/public');
+
+    app.use(express.static(path.join(config.root, '.tmp')));
+    app.use(express.static(path.join(config.root, 'main')));
+    app.set('appPath', 'main');
+    app.use(morgan('dev'));
+  }
+
   if ('development' === env || 'test' === env) {
     app.use(require('connect-livereload')());
     app.use(express.static(path.join(config.root, '.tmp')));

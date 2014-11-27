@@ -1,6 +1,6 @@
-define(['app','components/auth/auth.service'], function (app) {
+(function() {
     'use strict';
-    app.controller('SignupCtrl', function($scope, Auth, $location, $window) {
+    angular.module('ecosystemApp').controller('SignupCtrl', function($scope, Auth, $location, $window) {
         $scope.user = {};
         $scope.errors = {};
         $scope.register = function(form) {
@@ -26,4 +26,5 @@ define(['app','components/auth/auth.service'], function (app) {
             return $window.location.href = '/auth/' + provider;
         };
     });
-});
+
+}).call(this);

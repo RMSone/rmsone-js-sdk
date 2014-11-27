@@ -1,0 +1,14 @@
+h2 Entity Details
+div(ng-switch="" on="status")
+    div(ng-switch-when="loading")
+        | Loading entity...
+    div(ng-switch-when="done")
+        .entity-details
+            div(ng-bind-html="entity | json | textToHtml")
+        .error(ng-if="error")
+            | {{error}}
+        .button-wrapper
+            button.create.btn.btn-default(ng-click="onEdit()") Edit
+            button.cancel.btn.btn-default(ng-click="onDelete()") Delete
+    .error(ng-switch-when="error")
+        | Error loading entity!

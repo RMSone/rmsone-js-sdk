@@ -1,0 +1,161 @@
+[
+    {
+        "id": 1,
+        "name": "FirstEntityEver",
+        "description": "Description of FirtEntityEver",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "attribute1",
+                        "type": "INT"
+                    }
+                ]
+    },
+    {
+        "id": 2,
+        "name": "BasicEntity",
+        "description": "Not that important",
+        "sourceID": "",
+        "extends": "FirstEntityEver",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "attribute2",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute3",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute6",
+                        "type": "STRING"
+                    } ,
+                    {
+                        "name": "attribute7",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute8",
+                        "type": "STRING"
+                    }
+                ]
+    },
+    {
+        "id": 3,
+        "name": "ComplexEntity",
+        "description": "Most important entity",
+        "sourceID": "",
+        "extends": "BasicEntity",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    }
+                ]
+    },
+    {
+        "id": 4,
+        "name": "Independent",
+        "description": "Description of an independent entity",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    }
+                ]
+    },
+    {
+        "id": 5,
+        "name": "BasicEntity2",
+        "description": "Description of an independent entity",
+        "sourceID": "",
+        "extends": "BasicEntity",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "attribute4",
+                        "type": "Car"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    }
+                ]
+    },
+    {
+        "id": 6,
+        "name": "Car",
+        "description": "Description of an independent entity",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "power",
+                        "type": "DECIMAL"
+                    },
+                    {
+                        "name": "year",
+                        "type": "DATE"
+                    }
+                ]
+    },
+    {
+        "id": 7,
+        "name": "House",
+        "description": "Description of an independent entity",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": "",
+        "schema": [
+                    {
+                        "name": "rooms",
+                        "type": "INT"
+                    },
+                    {
+                        "name": "size",
+                        "type": "DECIMAL"
+                    }
+                ]
+    }
+]

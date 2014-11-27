@@ -1,0 +1,13 @@
+div(ui-tree="" data-drag-enabled="false")
+    ol.diagram-list(ui-tree-nodes="", ng-model="diagrams")
+        li(ng-repeat="diagram in diagrams track by $index", ui-tree-node="", ng-class="{active: selectedDiagram === diagram.id}")
+            div(ui-tree-handle="")
+                a.diagram-list-item(data-nodrag="", ng-click="openDiagram(diagram.id)")
+                    | {{diagram.name}}
+            ol.diagram-entity-list(ui-tree-nodes="", ng-model="diagram.entities")
+                li(ng-repeat="entity in diagram.entities track by $index", ui-tree-node="",
+                    ng-class="{active: selectedDiagram === diagram.id && selectedEntity === entity.id}")
+                    div(ui-tree-handle="")
+                        a.diagram-entity-list-item(data-nodrag="", ng-click="showEntityDetails(diagram.id, entity.id)")
+                            | {{entity.name}}
+

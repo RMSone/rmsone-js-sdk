@@ -1,0 +1,17 @@
+h2 Diagram Details
+div(ng-switch="" on="status")
+    div(ng-switch-when="loading")
+        | Loading diagram...
+    div(ng-switch-when="done")
+        .diagram-details.col-md-8
+            h4 {{diagram.name}}
+            div(entity-diagram="")
+            .error(ng-if="error")
+                | {{error}}
+            .button-wrapper
+                button.create.btn.btn-default(ng-click="onEdit()") Edit
+                button.cancel.btn.btn-default(ng-click="onDelete()") Delete
+        .diagram-entity-details.col-md-4
+            div(ui-view="")
+    .error(ng-switch-when="error")
+        | Error loading diagram!

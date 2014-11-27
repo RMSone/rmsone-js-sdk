@@ -1,0 +1,84 @@
+@import 'app/entityManagement/styles/variables.styl'
+@import 'app/entityManagement/components/modal/modal.styl';
+.entity-list
+    padding-left: 10px
+    list-style-type: none
+    .active .entity
+        font-weight: bold
+    .entity
+        color: $list-entities-color
+
+.entity-details-container
+	.entity-details
+        width: 500px
+        padding: 10px
+        background: $entity-details-bg-color
+        border: 1px solid $entity-details-border-color
+        border-radius: 4px
+        font-family: monospace
+        word-wrap: break-word
+    .button-wrapper
+        margin-top: 5px
+    .ral-command
+        font-family: monospace
+    .create, .cancel, .edit
+        margin-right: 10px
+    .error
+        color: $error-color
+        font-weight: bold
+        margin-bottom: 5px
+
+.diagram-list
+    margin-bottom: 10px
+    .angular-ui-tree-handle
+        cursor: default;
+    .angular-ui-tree-node
+        .diagram-list-item, .diagram-entity-list-item
+            cursor: pointer;
+            color: #777
+            font-weight: normal
+        &.active
+            .diagram-list-item
+                font-weight: bold
+        .diagram-entity-list
+            .angular-ui-tree-node.active
+                .diagram-entity-list-item
+                    font-weight: bold
+
+.diagram
+    .diagram-entity-element
+        padding: 19px
+        margin-bottom: 10px
+    .scroll-entity-container
+        background-color: $scroll-color;
+        border-radius: 4px;
+        color: $scroll-font-color;
+        font-size: 12px;
+        font-weight: bold;
+        left: -1px;
+        padding: 20px;
+        overflow-y: scroll;
+
+.diagram-details
+    .link 
+        .marker-arrowheads, .connection-wrap, .link-tools
+            display: none
+    .entity-class-name-rect
+        fill: $entity-name-rect-fill
+        stroke: $entity-name-rect-stroke
+    .entity-class-attrs-rect
+        fill: $entity-attrs-rect-fill
+        stroke: $entity-attrs-rect-stroke
+    .entity-class-name-text
+        fill: $entity-name-text
+        font-size: 14px
+    .entity-class-attrs-text
+        fill: $entity-attrs-text
+        font-size: 12px
+        display: none
+    .entity-class-attrs-scrollbar
+        fill: $entity-attrs-scrollbar-fill
+        stroke: $entity-attrs-scrollbar-stroke
+.diagram-entity-details
+    .entity-details
+        width: 100%

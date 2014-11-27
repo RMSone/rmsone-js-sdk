@@ -1,6 +1,6 @@
-define(['app'], function (app) {
+(function() {
     'use strict';
-    app.controller('SettingsCtrl', function($scope, User, Auth) {
+    angular.module('ecosystemApp').controller('SettingsCtrl', function($scope, User, Auth) {
         $scope.errors = {};
         return $scope.changePassword = function(form) {
             $scope.submitted = true;
@@ -16,4 +16,4 @@ define(['app'], function (app) {
         };
     });
 
-});
+}).call(this);

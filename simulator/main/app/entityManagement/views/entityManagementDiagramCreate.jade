@@ -1,0 +1,18 @@
+h2 Create Diagram
+form(novalidate="").diagram
+    section.row
+        div.col-md-6
+            div.form-group
+                label Diagram Name:
+                input.user-input.form-control(ng-model="diagram.name", required="")
+            div.form-group.well.col-md-12
+                label Entities:
+                ul.entity-list.col-md-12.scroll-entity-container
+                    li(ng-repeat="entity in entities" ng-class="{active: selected === entity.id}")
+                        button.diagram-entity-element.btn.btn-default.col-md-12(ng-click="onAddRemoveEntity(entity, $event)",
+                            data-toggle="button", aria-pressed="false", autocomplete="off", ng-class="{'btn-success': entityIsSelected(entity)}") {{entity.name}}
+    .error.alert.alert-danger(ng-if="error")
+        | {{error}}
+    .button-wrapper
+        button.create.btn.btn-default(ng-click="onCreate()") Create
+        button.cancel.btn.btn-default(ng-click="onCancel()") Cancel

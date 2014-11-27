@@ -167,6 +167,41 @@ module.exports = function (grunt) {
             }
         },
 
+        jscs: {
+            src: [
+                '<%= yeoman.client %>/{app,components}/**/*.js',
+                'server/**/*.js'
+            ],
+            options: {
+                config: ".jscsrc"
+            },
+            server: {
+                src: [
+                    'server/**/*.js',
+                    '!server/**/*.spec.js'
+                ]
+            },
+            serverTest: {
+                src: [
+                    'server/**/*.spec.js'
+                ]
+            },
+            client: {
+                src: [
+                    '<%= yeoman.client %>/{app,components}/**/*.js',
+                    '!<%= yeoman.client %>/{app,components}/**/*.spec.js',
+                    '!<%= yeoman.client %>/{app,components}/**/*.mock.js'
+                ]
+            },
+            test: {
+                src: [
+                    '<%= yeoman.client %>/{app,components}/**/*.spec.js',
+                    '<%= yeoman.client %>/{app,components}/**/*.mock.js'
+                ]
+            }
+        },
+
+
         // Empties folders to start fresh
         clean: {
             dist: {
@@ -580,7 +615,7 @@ module.exports = function (grunt) {
                 },
                 files: {
                     '<%= yeoman.client %>/index.html': [
-                        ['!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
+                        ['{.tmp,<%= yeoman.client %>}/{app,components}/**/*.js',
                             '!{.tmp,<%= yeoman.client %>}/app/**/server/**/*.js',
                             '!{.tmp,<%= yeoman.client %>}/app.js',
                             '!{.tmp,<%= yeoman.client %>}/{app,components}/**/*.spec.js',
@@ -752,6 +787,13 @@ module.exports = function (grunt) {
         'uglify',
         'rev',
         'usemin'
+    ]);
+
+    grunt.registerTask('check', [
+        'jshint:all',
+        'jshint:test',
+        'jscs:client',
+        'jscs:test'
     ]);
 
     grunt.registerTask('default', [

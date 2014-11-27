@@ -17,7 +17,7 @@ router.patch('/page/:id', auth.hasRole('admin'), controller.updatePage);
 router.delete('/page/:id', auth.hasRole('admin'), controller.destroyPage);
 
 router.post('/upload', auth.isAuthenticated(), controller.upload);
-
+router.post('/createdirectory', auth.isAuthenticated(), controller.createdirectory);
 router.get('/appinfo', auth.isAuthenticated(), controller.getappinfo);
 router.get('/appConfigInfo', controller.getAppConfigList);
 router.post('/appinfo', auth.isAuthenticated(), controller.createappinfo);

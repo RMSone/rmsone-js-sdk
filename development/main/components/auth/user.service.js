@@ -1,7 +1,6 @@
-define(['angular'], function () {
+(function() {
     'use strict';
-    var user = angular.module('rmsAdminService', []);
-    user.factory('User', function($resource) {
+    angular.module('ecosystemApp').factory('User', function($resource) {
         return $resource('/api/users/:id/:controller', {
             id: '@_id'
         }, {
@@ -19,4 +18,5 @@ define(['angular'], function () {
             }
         });
     });
-});
+
+}).call(this);

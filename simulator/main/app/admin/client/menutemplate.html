@@ -41,7 +41,7 @@
         <li ng-repeat="item in item.items" ui-tree-node ng-class="{ 'selected': selected, 'original': original }" ng-include="'items_renderer.html'"></li>
     </ol>
 </script>
-<ui-tree callbacks="callbacks" drag-enabled="parameters.dragEnabled" empty-placeholder-enabled="parameters.emptyPlaceholderEnabled" max-depth="parameters.maxDepth" drag-delay="parameters.dragDelay" drag-distance="parameters.dragDistance" lock-x="parameters.lockX" lock-y="parameters.lockY" bound-to="parameters.boundTo" spacing="parameters.spacing" coverage="parameters.coverage" cancel-key="parameters.cancelKey" copy-key="parameters.copyKey" select-key="parameters.selectKey">
+<ui-tree callbacks="callbacks" drag-enabled="parameters.dragEnabled" empty-placeholder-enabled="parameters.emptyPlaceholderEnabled" max-depth="parameters.maxDepth" drag-delay="parameters.dragDelay" drag-distance="parameters.dragDistance" lock-x="parameters.lockX" lock-y="parameters.lockY" bound-to="parameters.boundTo" spacing="parameters.spacing" coverage="parameters.coverage" cancel-key="parameters.cancelKey" copy-key="parameters.copyKey" select-key="parameters.selectKey" expand-on-hover="(parameters.enableExpandOnHover) ? parameters.expandOnHover : parameters.enableExpandOnHover">
     <a class="btn btn-lg btn-primary btn-save-menu"  ng-click="newtopNode(list)">Add Menu</a>
     <a class="btn btn-lg btn-primary btn-add-menu" ng-click="submitMenuData(list)">Save</a>
 

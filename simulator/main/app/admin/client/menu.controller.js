@@ -1,6 +1,6 @@
-define(['app'], function (app) {
+(function() {
     'use strict';
-    app.controller('MenuCtrl', function ($scope, $http, Auth) {
+    angular.module('ecosystemApp').controller('MenuCtrl', function ($scope, $http, Auth) {
         $scope.parameters = {
             dragEnabled: true,
             emptyPlaceholderEnabled: false,
@@ -15,7 +15,8 @@ define(['app'], function (app) {
             cancelKey: "esc",
             copyKey: "shift",
             selectKey: "ctrl",
-            enableExpandOnHover: true
+            enableExpandOnHover: true,
+            expandOnHover: 500
         };
         $scope.selected = '';
         $scope.pages=[];
@@ -148,4 +149,4 @@ define(['app'], function (app) {
         };
     });
 
-});
+}).call(this);

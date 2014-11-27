@@ -1,0 +1,14 @@
+div(ng-controller="EntityManagementEntityListCtrl" ng-switch="" on="status")
+    h2
+        | Entities List
+    div(ng-switch-when="loading")
+        | Loading entities...
+    div(ng-switch-when="done")
+        ul.entity-list
+            li(ng-repeat="entity in entities track by $index" ng-class="{active: selected === entity.id}")
+                a.entity(ui-sref="entityManagement.viewEntity({ id: entity.id })")
+                    | {{entity.name}}
+    .error(ng-switch-when="error")
+        | Error loading entities!
+    button.create-entity.btn.btn-default(ui-sref="entityManagement.createEntity")
+        | Create Entity

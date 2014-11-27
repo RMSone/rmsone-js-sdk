@@ -1,0 +1,10 @@
+div(ng-controller="EntityManagementDiagramListCtrl" ng-switch="" on="status")
+    h2
+        | Diagram List
+    div(ng-switch-when="loading")
+        | Loading diagrams...
+    div(ng-switch-when="done")
+        div(ng-include="'app/entityManagement/views/templates/entityManagementDiagramListTmp.html'")
+        button.create-entity.btn.btn-default(ui-sref="entityManagement.createDiagram") Create Diagram
+    .error(ng-switch-when="error")
+        | Error loading diagrams!

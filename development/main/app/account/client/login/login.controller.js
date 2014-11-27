@@ -1,6 +1,6 @@
-define(['app'], function (app) {
+(function() {
     'use strict';
-    app.controller('LoginCtrl', function($scope, Auth, $location, $window,$cookieStore,$rootScope) {
+    angular.module('ecosystemApp').controller('LoginCtrl', function($scope, Auth, $location, $window,$cookieStore) {
         $scope.user = {};
         $scope.errors = {};
         $scope.userpic='assets/images/avatar.jpg';
@@ -15,11 +15,8 @@ define(['app'], function (app) {
                     password: $scope.user.password
                 }).then(function() {
                     //return $location.path('/');
-
-//                    angular.element(document.getElementById('navbar')).scope().isLoggedIn(true);
-                    return $window.location.href='#/';
-
-                    //$urlRouterProvider.reload();
+                    return $window.location.href='/';
+                    $urlRouterProvider.reload();
                 })["catch"](function(err) {
                     return $scope.errors.other = err.message;
                 });
@@ -29,4 +26,5 @@ define(['app'], function (app) {
             return $window.location.href = '/auth/' + provider;
         };
     });
-});
+
+}).call(this);

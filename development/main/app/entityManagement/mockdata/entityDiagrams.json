@@ -1,0 +1,253 @@
+[
+    {
+        "id": 1,
+        "name": "Diagram One",
+        "entities": [
+            {
+                "id": 1,
+                "name": "FirstEntityEver",
+                
+                "description": "Description of FirtEntityEver",
+                "sourceID": "",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute1",
+                        "type": "INT"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "BasicEntity",
+                "description": "Not that important",
+                "sourceID": "",
+                "extends": "FirstEntityEver",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute2",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute3",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute6",
+                        "type": "STRING"
+                    } ,
+                    {
+                        "name": "attribute7",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute8",
+                        "type": "STRING"
+                    }
+                ]
+            },
+            {
+                "id": 5,
+                "name": "BasicEntity2",
+                "description": "Not that important",
+                "sourceID": "",
+                "extends": "BasicEntity",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute4",
+                        "type": "Car"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    }
+                ]
+            },
+            {
+                "id": 6,
+                "name": "Car",
+                "description": "Description of an independent entity",
+                "sourceID": "",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "power",
+                        "type": "DECIMAL"
+                    },
+                    {
+                        "name": "year",
+                        "type": "DATE"
+                    }
+                ]
+            }
+        ],
+        "description": "Diagram that shows the relationship of some entities.",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": ""
+    },
+    {
+        "id": 2,
+        "name": "Diagram Two",
+        "entities": [
+            {
+                "id": 1,
+                "name": "FirstEntityEver",
+                
+                "description": "Description of FirtEntityEver",
+                "sourceID": "",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute1",
+                        "type": "INT"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "BasicEntity",
+                "description": "Not that important",
+                "sourceID": "",
+                "extends": "FirstEntityEver",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute2",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute3",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute6",
+                        "type": "STRING"
+                    } ,
+                    {
+                        "name": "attribute7",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute8",
+                        "type": "STRING"
+                    }
+                ]
+            }
+        ],
+        "description": "This is the second diagram from the list.",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": ""
+    },
+    {
+        "id": 3,
+        "name": "Diagram Three",
+        "entities": [
+            {
+                "id": 1,
+                "name": "FirstEntityEver",
+                
+                "description": "Description of FirtEntityEver",
+                "sourceID": "",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute1",
+                        "type": "INT"
+                    }
+                ]
+            },
+            {
+                "id": 2,
+                "name": "BasicEntity",
+                "description": "Not that important",
+                "sourceID": "",
+                "extends": "FirstEntityEver",
+                "createdAt": "",
+                "createdBy": "",
+                "updatedAt": "",
+                "updatedBy": "",
+                "schema": [
+                    {
+                        "name": "attribute2",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute3",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute4",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute5",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute6",
+                        "type": "STRING"
+                    } ,
+                    {
+                        "name": "attribute7",
+                        "type": "STRING"
+                    },
+                    {
+                        "name": "attribute8",
+                        "type": "STRING"
+                    }
+                ]
+            }
+        ],
+        "description": "This is some other diagram from the list of diagrams.",
+        "sourceID": "",
+        "createdAt": "",
+        "createdBy": "",
+        "updatedAt": "",
+        "updatedBy": ""
+    }
+]

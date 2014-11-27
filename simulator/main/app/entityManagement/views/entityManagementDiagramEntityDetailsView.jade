@@ -1,0 +1,9 @@
+h4 Entity Details
+div(ng-switch="" on="status")
+    div(ng-switch-when="loading")
+        | Loading entity details...
+    div(ng-switch-when="done")
+        .entity-details
+            div(ng-bind-html="entity | json | textToHtml")
+    .error(ng-switch-when="error")
+        | Error loading entity details!

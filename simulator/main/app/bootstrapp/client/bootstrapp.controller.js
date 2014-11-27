@@ -1,6 +1,14 @@
-define(['app'], function (app) {
-    app.controller('BootstrappCtrl', function($scope, $http, $location,Auth) {
+(function() {
+    'use strict';
+    var app;
+
+    app = angular.module('ecosystemApp');
+
+    'use strict';
+
+    app.controller('BootstrappCtrl', function($scope, $http, $location, socket) {
         $scope.awesomeThings = [];
-        //console.log(Auth.isLoggedIn());
+
     });
-});
+
+}).call(this);

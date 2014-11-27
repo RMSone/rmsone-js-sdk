@@ -1,0 +1,13 @@
+.draw-diagram
+
+script(type="text/ng-template", id="entityDiagram.html")
+    g.rotatable
+        g.scalable
+            g.entity-name-wrapper
+                rect.entity-class-name-rect
+                text.entity-class-name-text(text-anchor="middle")
+            g.entity-attrs-wrapper
+                rect.entity-class-attrs-rect
+                g.scrollable
+                    text.entity-class-attrs-text
+                    rect.entity-class-attrs-scrollbar(width="8")

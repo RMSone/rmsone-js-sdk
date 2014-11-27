@@ -1,6 +1,6 @@
-define(['app'], function (app) {
+(function() {
     'use strict';
-   app.controller('ListTemplateCtrl', function($scope, $http, $location, $timeout, appService) {
+    angular.module('ecosystemApp').controller('ListTemplateCtrl', function($scope, $http, $location, $timeout, socket, appService) {
         $scope.jsonobj = [];
         $scope.newtemplate = {};
         $scope.newtemplate.title = "test template";
@@ -10,9 +10,9 @@ define(['app'], function (app) {
         $scope.editedTemplateIdList = [];
         $scope.templateTypes = {1: 'static', 2: 'app'};
 
-        $scope.apps= {1: 'Import', 2: 'Exposure',3:'Enity Management',4:'App1'};
+        $scope.apps= {1: 'Import', 2: 'Exposure',3:'Enity Management',4:'MyApp'};
 
-        $scope.templateUrl= {1: '/entityManagement', 2: '/entityManagement/entity/create',3: 'app1'};
+        $scope.templateUrl= {1: '/entityManagement', 2: '/entityManagement/entity/create'};
 
         $scope.jsonobj.push({"id": "", "title" : "Page1", type: "static",application: "application", navigationpath : "aSDASD"});
 
@@ -209,6 +209,9 @@ define(['app'], function (app) {
             $http["delete"]('/api/configs/page/' + row.id);
             $scope.getTemplateList();
         };
+        return $scope.$on('$destroy', function() {
+            return socket.unsyncUpdates('thing');
+        });
     });/*.directive('contenteditable',
         function() {
             return {
@@ -279,4 +282,4 @@ define(['app'], function (app) {
         }]);*/
 
 
-});
+}).call(this);

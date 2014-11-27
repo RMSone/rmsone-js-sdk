@@ -2,10 +2,10 @@
  * Created by haiqing on 10/1/14.
  */
 
-define(['app'], function (app) {
+(function() {
     'use strict';
 
-    app.controller('editContentCtrl', function($scope, $http, $location, $cookieStore, $timeout, appService) {
+    angular.module('ecosystemApp').controller('editContentCtrl', function($scope, $http, $location, $cookieStore, $timeout, socket, appService) {
 
         $scope.tinymceOptions = {
             theme: "modern",
@@ -85,4 +85,4 @@ define(['app'], function (app) {
         });
     });
 
-});
+}).call(this);
