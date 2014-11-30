@@ -1,8 +1,0 @@
-h2 Create Entity
-form(novalidate="")
-    textarea.ral-command(cols="70", rows="7", ng-model="definition")
-    .error(ng-if="error")
-        | {{error}}
-    .button-wrapper
-        button.create.btn.btn-default(ng-click="onCreate()") Create
-        button.cancel.btn.btn-default(ng-click="onCancel()") Cancel
