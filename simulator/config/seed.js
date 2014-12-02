@@ -7,6 +7,7 @@
 
 var Thing = require('../server/api/thing/thing.model');
 var User = require('../server/api/user/user.model');
+var AppInfo = require('../main/app/admin/server/appinfo.model')('rms');
 
 Thing.find({}).remove(function() {
     Thing.create({
@@ -48,5 +49,18 @@ User.find({}).remove(function() {
         password: 'admin123'
     }, function() {
         console.log('finished populating users');
+    });
+});
+
+AppInfo.find({}).remove(function() {
+    AppInfo.create({
+        name: 'ecosystemApp',
+        appfoldername: 'ecosystemApp',
+        destinationapppath: 'ecosystemApp',
+        configjson: '{\"angularFramework\":\"true\",\"modules\":[],\"dependentModules\":[\"ngCookies\", \"ngResource\", \"ngSanitize\", \"btford.socket-io\", \"ui.router\", \"ui.bootstrap\",\"ngGrid\",\"ui.tree\",\"angucomplete\",\"ui.tinymce\",\"leaflet-directive\",\"adminUiApp\",\"ngDropdowns\"]}',
+        content: 'ecosystemApp',
+        status: 'Installed'
+    }, function() {
+        console.log('finished populating appInfo');
     });
 });

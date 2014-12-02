@@ -1,14 +1,11 @@
+var apps = loadConfig();
 (function() {
     'use strict';
-    angular.module('mymodule',[]);
-    angular.module('nonAngularApp',[]);
-    angular.module('adminUiApp',[]);
-    angular.module('import',[]);
-    angular.module('exposure',[]);
+    for (var i = 0; i < apps.length; i++) {
+        angular.module(apps[i],[]);
+    }
 
-
-
-    angular.module('ecosystemApp', ['ngCookies', 'ngResource', 'ngSanitize', 'btford.socket-io', 'ui.router', 'ui.bootstrap','ngGrid','ui.tree', 'angucomplete','ui.tinymce','leaflet-directive','mymodule','nonAngularApp','adminUiApp','import','exposure','ngDropdowns']).config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
+    angular.module('ecosystemApp', moduleDependency).config(function($stateProvider, $urlRouterProvider, $locationProvider, $httpProvider) {
         $urlRouterProvider.otherwise('/login');
         $locationProvider.html5Mode(true);
         return $httpProvider.interceptors.push('authInterceptor');
